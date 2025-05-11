@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+h1 {
+    color: whitesmoke;
+    background-color: #007A33;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: black;
+    height: 40px;
+}
+
+nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 120%;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+.card {
+    border: 1px black solid;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.aboutmetitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #007A33;
+    color: whitesmoke;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Intro and Picture */
+
+#namepic {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#nameintro {
+    grid-column: 1/2;
+}
+
+.block {
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#mypic {
+    grid-column: 2/3;
+    margin: 10px;
+}
+
+/*  Flag and State Description */
+
+#city {
+    text-decoration: underline;
+    text-align: center;
+}
+
+#flagstate {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#flag {
+    grid-column: 1/2;
+}
+
+#flag img {
+    width: 120%;
+}
+
+ul {
+    margin-top: 200px;
+}
+
+footer {
+    color: whitesmoke;
+    background-color: #007A33;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}

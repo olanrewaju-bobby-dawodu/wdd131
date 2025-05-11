@@ -1,0 +1,46 @@
+body {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+}
+
+header {
+    grid-column: 1 / 5;
+}
+
+.header {
+    background: gray;
+    color: whitesmoke;
+    grid-column: 1 / 5;
+    padding: 1vw;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+    background: black;
+    color: white;
+    grid-column: 1 / 5;
+}
+
+
+main {
+    background-color: lightgray;
+    grid-column: 1 / 4;
+    padding: 1vw;
+}
+
+aside {
+    background-color: pink;
+    grid-column: 4 / 5;
+    padding: 1vw;
+}
+
+footer {
+    background-color: yellow;
+    grid-column: 1 / 5;
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+}
