@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOM example</title>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+      <script>
+        const link = document.querySelector("a");
+        link.textContent = "Mozilla Developer Network";
+        link.href = "https://developer.mozilla.org";
+        
+        const sect = document.querySelector("section");
+        const para = document.createElement("p");
+
+        para.textContent = "We hope you enjoyed the ride.";
+
+        sect.appendChild(para);
+
+        const text = document.createTextNode("- the premier source for web development knowledge.")
+
+        const linkPara = document.querySelector("p");
+        linkPara.appendChild(text);
+
+        // The purpose of the immediate above is to create a variable with some plain text in it, then to grab an existing paragraph element, then add text to the end of that paragraph. Since we are not adding an entirely new element, but modifying an existing one, this is why we'd do it this way.
+
+        para.style.color = "white";
+        para.style.backgroundColor = "black";
+        para.style.padding = "10px";
+        para.style.width = "500px";
+        para.style.textAlign = "center";
+
+        // We see here a variant of the object.method model, and I tested this to confirm, where () are not used at the end of the style method, but rather a dot (.). It's different, and I hope to understand soon why the difference.
+
+        // Also of note. Javascript changes the way things are written from CSS. background-color would be CSS way of writing things, while JS converts this to backgroundColor (using camel case instead)
+
+
+
+      </script>
+  </body>
+</html>
+
+<!-- Parent, Child, Descendant, and Sibling Elements:
+    - Parent (above other elements, has elements inside it)
+    - Child (below another element, has a parent element it is inside)
+    - Descendant (at least two levels down from a parent element. Also has a parent element that has a parent element, and so on and so forth)
+    - Sibling (on the same level as another element, below the same parent)
+    -- Pretty straightforward -->
+
+<!-- Manipulating elements:
+    - While Javascript can do more than just HTML, it was built to work with and manipulate HTML. Therefore, it has contained within it methods (types of actions that can be performed on "objects") for each element that exists in HTML and CSS coding. For technical purposes, a 'method' is something performed on an 'object', so the objects in this case can be the whole page, or specific elements within that page, depending on how you think about it. If you need to know what methods are available for a specific document type or element, just look it up on the internet -->
+
+<!-- querySelector, and why it is used:
+    - querySelector() is a method available to most all elements on a document, and the document itself. It's purpose is to grab an element so it can be captured in a variable in Javascript, and then manipulated after the fact with a different method using the variable name created. 
+    - variables are created with this style of coding:
+    const variable = document.querySelector("h1");
+    - where 'const' is the pre-word meaning "we are creating a variable" but stands for "constant", 'variable' is the name of the variable/container being created, the equals sign is how you divide the variable name from what the variable will be, 'document', which references the entire body of the page you are loading, or really the entirety of the html document, the '.' which separates the object you've referenced "in this case document", and then doing something with it with a method, and the method being querySelector(), which then references in its parathesis the element on the HTML page being referenced, in the above case, the 'h1' element.  
+    
+    - Now that the variable is created for Javascript, Javascript code can work on it to do all sorts of things. 
+    
+    - A side note, the method querySelector() works on the first element of the page. This is great if you only want to modify that first element of its kind. However, if you want to modify all elements on a webpage, you need to do this using the method .querySelectorAll() .. which then grabs all of them. 
+    
+    Why use querySelector() over other methods?
+    - Because it is the most modern version. Unfortunately, instead of updating how certain older introductions of Javascript work, like a normal person, they have instead made things semi-open source, and so people come in and make new methods all the time to do things. That having been said, querySelector() and querySelectorAll() are the most modern and functional equivalents of the technology. They have access to full css and other features, most of which don't currently concern you. However, you'll likely see this change to other ways of doing things in the future, while this older functionality will continue to exist in Javascript, just fall out of popularity as newer entrants into the market use newer and more robust methods for doing things.-->
+
+    <!-- 
+    Some of these older methods, which can still be used:
+
+        document.getElementByID() - grabs based on the id in the element, rather than by the element itself. Nice if you want to be more specific on which element from the document you are grabbing. In fact, you may actually use this.
+
+        document.getElementByTagName() - similar to document.querySelectorAll(), in that it grabs all elements of a specific type, and puts them in an array, so you can just load all of those. I don't know that this one would be needed anymore, since qyerySelectorAll essentially replaced it, storing the array of objects in a node.js array, but the getElementByID() is definitely of use, as I've learned when programming things using CSS.
+
+    Just learned of a new method for the entire document object. Maybe can also use later on:
+
+    .createElement()
+
+    Why use this one? Well, turns out, when you use querySelector(), you are grabbing existing elements within an HTML document. This is great if you want to 'modify' things, but if you want to add something new, you can't use querySelector(). Instead, you need to use createElement(), which will add something new to the equation. In the above example, you created that new element, defined its content, then added (appended) it to the existing elements on the HTML page. I imagine you could, if you really wanted to, create an entire html page this way, being contained wholly within Javascript, but then outputting to the HTML page as needed. Maybe you'd need the framework of HTML in the HTML file, but everything else could be added after the fact with these kinds of commands. Something to consider.
+
+    Moving and removing nodes:
+        Since grabbing an element in the form of an object grabs the one and only copy of that element in the Javascript variable/container, to do more with that node, you first have to copy it, doing something like:
+
+        const secondCopy = document.cloneNode("p"); .. which then makes a second copy. This let's you, for example, do something with the original element, but then put that same element (text of whatever) elsewhere so that it could be used in a different way without infringing on the original action. Otherwise, the second piece of Javascript would override the original.
+
+        You can completely delete an element from displaying (essentially removed from the HTML document) by marking it in a variable container, then using a method to remove it, like so:
+
+        const h1 = document.querySelector("h1");
+        document.removeChild(h1);
+
+        Note in the above example, h1 is a child of Document. You could use this to be more specific (and would need to since it only references a specific child element), by using a different prefix object .. instead of document, for example, I could have done sect (meaning section in the above variable example) here. 
+
+        const is used because of the way this grabs the one and only copy of something. You can't override variables with new declarations in Javascript. It breaks things, so make sure you use one variable for one thing in Javascript. That way there is no confusion and Javscript can continue being happy.
+
+        One more way to remove an element, is by just referencing it direct. That way you don't need to concern yourself with who its parent is:
+
+        const h1 = document.querySelector("h1");
+        h1.remove();
+
+        I might end up using this the most, unless there is a really good reason to target something specific .. Ah, the reason? Cause this doesn't exist in older browser. So, if I care about those people using older browsers, well, they wouldn't see my page display very well.
+
+    Manipulating styles:
+    
+        To do this, understand there is one more level to the object.method model, the Property:
+
+        This seems to break the rules above, since it does not use the closing tags: (). Here's a couple examples:
+
+        para.style.color = "white";
+        para.style.backgroundColor = "black";
+        para.style.padding = "10px";
+        para.style.width = "250px";
+        para.style.textAlign = "center";
+
+        Note that they are object.method.property = the info set to that property. It is the same as putting something into the () part of the method, but in this case, it is following the . | kind of confusing why they would change this at this point, but I digress. 
+
+    Setting attributes on an element from the JS side:
+
+        para.setAttribute("class", "highlight");
+        where para is the variable already created for the element
+        setAttribute() is the method
+        "class" is the type of attribute being set
+        "highlight" is the name of the class being creaated
+
+    They noted in the training that it's unlikely we'd actually want to set static HTML content using JS, whereas it is easier to do this in HTML and CSS. JS is more about changing things in response to inputs, so we'll stick to that. But, at least we know it is possible.
+
+    -->
