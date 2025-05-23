@@ -25,3 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("lastModified").textContent = `Last Modification: ${formattedDate} West Africa Time`;
 });
+
+// hamburger menu bar
+const hamButton = document.querySelector("#hamburger");
+const navigation = document.querySelector(".navigation");
+
+hamButton.addEventListener("click", () =>{
+    navigation.classList.toggle("open");
+    hamButton.classList.toggle("open");
+})
