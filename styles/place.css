@@ -1,0 +1,171 @@
+
+  body {
+    font-family: Arial, sans-serif;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  header, footer {
+    background-color: #007A33;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    font-size: 22px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  .hero img {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+
+  .weather-icon::after {
+    margin-left: 0.5rem;
+  }
+
+  picture {
+    display: flex;
+    justify-content: center;
+  }
+
+  .data{
+    position: absolute;
+    top: 200px;
+    right: 75%;
+    width: 250px;
+    padding: 0;
+    background-color: rgba(234, 234, 202, 0.9);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+ }
+
+  .data h2{
+    background-color: #006847;
+    color: white;
+    margin: 0;
+    margin-left: -5%;
+    margin-top: 8%;
+    padding: 10px;
+    width: 80%;
+    right: 20%;
+  }
+
+  .data p{
+    padding: 8px;
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    line-height: 1px;
+  }
+
+  .weather{
+    position: absolute;
+    left: 2%;
+    width: 15%;
+    background-color: rgba(234, 234, 202, 0.9);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+    color: black;
+    margin: 0;
+    margin-left: 79%;
+    margin-top: -250px;
+    padding: 10px;
+    right: 20%;
+
+  }
+
+  .weather h2{
+    background-color: #006847;
+    color: white;
+    margin: 0;
+    margin-left: -10%;
+    margin-top: 8%;
+    padding: 10px;
+    width: 80%;
+    right: 20%;
+
+  }
+
+  .weather-icon img {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 600px) {
+    body {
+      font-size: 16px;
+      padding: 0;
+    }
+
+    header, footer {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+    }
+
+    .data,
+    .weather {
+      position: static;
+      width: auto;
+      margin: 1rem;
+      padding: 1rem;
+      font-size: 0.95rem;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    .data h2,
+    .weather h2 {
+      width: 100%;
+      margin: 0 0 1rem 0;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      background-color: transparent;
+      color: var(--primary-color);
+      text-align: center;
+    }
+
+    .data p,
+    .weather p {
+      padding: 6px;
+      text-align: center;
+      line-height: 0.5px;
+      font-size: 0.95rem;
+    }
+
+    .weather-icon img {
+      width: 30px;
+      margin-left: 5px;
+    }
+
+    footer {
+      font-size: 0.9rem;
+    }
+  }
