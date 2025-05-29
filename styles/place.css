@@ -1,4 +1,10 @@
 
+:root {
+  --primary-color: #007A33;
+  --secondary-color: white;
+}
+
+
   body {
     font-family: Arial, sans-serif;
     color: whitesmoke;
@@ -8,8 +14,8 @@
   }
 
   header, footer {
-    background-color: #007A33;
-    color: white;
+    background-color:var(--primary-color);
+    color: var(--secondary-color);
     justify-content: center;
     text-align: center;
     padding: 1rem;
@@ -51,8 +57,8 @@
  }
 
   .data h2{
-    background-color: #006847;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     margin: 0;
     margin-left: -5%;
     margin-top: 8%;
@@ -86,8 +92,8 @@
   }
 
   .weather h2{
-    background-color: #006847;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     margin: 0;
     margin-left: -10%;
     margin-top: 8%;
@@ -148,7 +154,7 @@
       padding: 0.5rem;
       font-size: 1.2rem;
       background-color: transparent;
-      color: var(--primary-color);
+      color: var(--secondary-color);
       text-align: center;
     }
 
