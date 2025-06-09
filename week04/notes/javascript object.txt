@@ -1,0 +1,40 @@
+The JavaScript object structure is similar to a Dictionary in Python. Objects in Javascript are collections of key:value pairs.
+The key is on the left side of the colon and the value is on the right.
+The key is a string but does not always need to be quoted. Quotes are necessary if the key has a space in it.
+The value can be anything that can be assigned to a variable in Javascript: primitives, arrays, other objects, functions, etc.
+Keys that store data are called properties, keys that store functions are called methods.
+
+Example:
+
+let person = {
+  name: "Antonia Francesca",
+  age: 30,
+  profession: "Software Engineer",
+  hobbies: ["reading", "playing guitar", "hiking"],
+  address: {
+    street: "123 Camino Real",
+    city: "Santa Rosa",
+    country: "Honduras"
+  },
+  isEmployed: true,
+  greet: function() {
+    console.log(`Hello, my name is ${this.name}.`);
+  }
+};
+
+The person object includes properties name, age, profession, hobbies, address, and isEmployed.
+It also includes a greet method that logs a greeting message to the console using the person's name.
+The address property is an object itself, containing nested properties: street, city, and country.
+You can access and modify the properties and invoke the methods of the person object using bracket [] or dot notation.
+
+console.log(person['isEmployed']);   // bracket notation
+console.log(person.hobbies[0]);   // dot notation
+console.log(person.age);   // dot notation
+console.log(person['address'].city);   // combined notation
+
+1. true
+2. reading (gets the first hobby in the list)
+3. 30
+3. Santa Rosa
+
+person.age = 31; // to update an attribute within the object

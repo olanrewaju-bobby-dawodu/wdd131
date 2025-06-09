@@ -175,3 +175,21 @@
       font-size: 0.9rem;
     }
   }
+
+  @media (min-width: 1000px) {
+    .weather {
+      bottom: 20%;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .weather {
+      bottom: 22%;
+    }
+  }
+
+  @media (min-width; 1200px) {
+    .weather {
+      bottom: 17%;
+    }
+  }

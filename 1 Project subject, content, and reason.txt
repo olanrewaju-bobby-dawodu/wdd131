@@ -1,0 +1,26 @@
+Weekly Task List (Music Theme)
+Practice music theory and ear training — first part of the week
+
+Record and edit demo tracks — first part of the week
+
+Review music history and industry insights — early in the week
+
+Work on songwriting or composition exercises — early in the week
+
+Wind down for the evening with listening sessions
+
+Sketch ideas and plan goals for tomorrow
+
+Sleep and recharge for creative work
+
+🎵
+Subject:
+Independent Musicians and Their Creative Journeys
+
+✏️
+Succinctly describe the planned content of the website:
+A website that showcases the creative processes, styles, and personal inspirations of independent musicians. Rather than using clickable links, the site will reveal insights through hover-based popups tied to artist images and interactive content areas. To maintain privacy, pseudonyms and royalty-free stock images will be used where necessary.
+
+🎯
+The reason you chose this subject:
+I’m passionate about music and fascinated by how musicians express their creativity. I once came across a visually interactive music site that inspired me, and now I want to build a unique version of it that celebrates artistic individuality without compromising user experience.

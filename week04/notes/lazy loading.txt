@@ -1,0 +1,36 @@
+Image Loading Behavior in HTML
+To optimize loading performance on a web page, you can delay the loading of certain images by using the loading="lazy" attribute. This instructs the browser to wait until the image is about to enter the viewport before downloading it.
+
+
+<img
+  src="images/anyphoto.jpg"
+  alt="Descriptive text for meaningful image"
+  loading="lazy"
+  width="300"
+  height="500">
+The lazy value tells the browser: “Only load this when the user scrolls near it.”
+
+This is useful for off-screen images, such as those below the fold.
+
+By contrast, loading="eager" loads the image right away. This is the default behavior, so there's typically no need to specify it.
+
+ Optional: Add a Fade-In Effect with CSS
+To enhance the user experience, you can pair lazy loading with a fade-in animation using CSS:
+
+
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+Then in JavaScript, detect when the image finishes loading:
+
+
+document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+  img.addEventListener('load', () => {
+    img.classList.add('loaded');
+  });
+});
