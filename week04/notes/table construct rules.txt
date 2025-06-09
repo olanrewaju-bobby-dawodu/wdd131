@@ -1,0 +1,126 @@
+1. Tables are constructed for visual appeal, but also for the sake of accessibility for visually impaired users
+
+2. Captions provide a quick overview of what the table is about. Essentially a title
+
+3. thead, tbody, and tfoot do nothing for visual representation, but help group similar table elements so they can be easily modified in css
+
+4. Everything in tables is built row by row. <th> makes things bold and is meant as the table headers. <td> is not bolded and is meant for the table data or table content
+
+5. The colspan attribute inside html allows the table data or header to take up more space
+
+6. Using CSS and this structure, you can more fine tune what you want a general area to look like
+
+7. Scope attribute within the <th> tells the screen reader what to read all together. So if you did scope="col", it would read the data for the entire column, or if you did scope="row", it would read the labels for the entire associated row before moving on
+
+<thead>
+  <tr>
+    <th colspan="3" scope="colgroup">Clothes</th>
+  </tr>
+  <tr>
+    <th scope="col">Trousers</th>
+    <th scope="col">Skirts</th>
+    <th scope="col">Dresses</th>
+  </tr>
+</thead>
+
+If using a span, would use colgroup or rowgroup for the top one, and then col or row for the later ones.
+
+8. Instead of using scope, could use id and headers to label what something is:
+
+<thead>
+  <tr>
+    <th></th>
+    <th></th>
+    <th id="clothes" colspan="3">Clothes</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th></th>
+    <th id="trousers" headers="clothes">Trousers</th>
+    <th id="skirts" headers="clothes">Skirts</th>
+    <th id="dresses" headers="clothes">Dresses</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th id="belgium" rowspan="2">Belgium</th>
+    <th id="antwerp" headers="belgium">Antwerp</th>
+    <td headers="belgium antwerp clothes trousers">56</td>
+    <td headers="belgium antwerp clothes skirts">22</td>
+    <td headers="belgium antwerp clothes dresses">43</td>
+  </tr>
+  <tr>
+    <th id="ghent" headers="belgium">Ghent</th>
+    <td headers="belgium ghent clothes trousers">41</td>
+    <td headers="belgium ghent clothes skirts">17</td>
+    <td headers="belgium ghent clothes dresses">35</td>
+  </tr>
+</tbody>
+
+
+
+HTML:
+
+<table
+  <caption> </caption>
+  <thead> 
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+
+  <tfoot> 
+    <tr>
+      <td colspan="2">SUM</td>
+      <td> </td>
+    </tr>
+  </tfoot>
+</table>
+
+CSS:
+
+html {
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200,200,200);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td, th {
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: rgb(235,235,235);
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(250,250,250);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(245,245,245);
+}
+
+caption {
+  padding: 10px;
+}

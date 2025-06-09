@@ -1,0 +1,129 @@
+Dynamic Web Fundamentals – Week 3 Summary
+
+ Core Design Principles
+
+Layout & Spacing
+Proper use of spacing, sizing, and positioning enhances both visual appeal and accessibility.
+
+Key Design Elements:
+
+Typography: Use no more than 2–3 related font families.
+
+Color Scheme: Choose complementary colors that align with your site's tone. Ensure strong contrast for readability.
+
+Clarity: Design should be minimal, with generous whitespace. Be concise and rely on visuals.
+
+Consistency: Pages throughout the site should share a unified visual language and layout.
+
+Visual Hierarchy: Structure your content so the most important information is emphasized and flows top to bottom.
+
+Accessibility: Always design with users who may have visual, auditory, or mobility impairments in mind.
+
+User Feedback: Provide visual or interactive cues (like hover states) when users interact with elements.
+
+User-Centered Design: Prioritize the needs and expectations of your audience—not just your personal preferences.
+
+Visual Quality: Incorporate high-resolution images, thoughtful animations, and attractive typography.
+
+🎯
+ Pseudo-Classes vs. Pseudo-Elements
+Pseudo-Class (:hover, :focus):
+Targets an element during a specific state or interaction (e.g., mouse over).
+
+Pseudo-Element (::first-line, ::before):
+Targets a specific part of an element, allowing fine-grained styling.
+
+🖼️
+ Image Formats & Use Cases
+Format	Description
+.jpg	Compressed raster format; standard for web but loses quality when scaled.
+.png	Supports transparency; good for logos and overlays.
+.gif	Limited color palette; supports simple animations.
+.webp	Google’s efficient image format; better compression and supports animation.
+.heic	High-efficiency image format; limited browser support.
+.svg	Vector format; scalable without quality loss. Ideal for icons and illustrations.
+
+ Responsive Images
+Use srcset and <picture> to deliver optimized images for different screen sizes:
+
+Example using srcset:
+
+
+<img
+  src="clock-demo-200px.png"
+  alt="Clock showing 12:45"
+  srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w"
+  sizes="(max-width: 600px) 200px, 50vw">
+Example using <picture> element:
+
+
+<picture>
+  <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+  <source srcset="images/hero-medium.webp" media="(min-width: 550px)">
+  <img src="images/hero-small.webp" alt="Cityscape" width="500" height="250">
+</picture>
+💡 Note: The <source> elements must list srcset before media. This example uses a desktop-first approach.
+
+ JavaScript Arrays
+Declaring Arrays
+
+let scores = [100, 72, 83, 94];
+let names = ['Nancy', 'Bart', 'Jorge'];
+let emptyArray = [];
+Accessing & Modifying
+
+
+let firstScore = scores[0];
+scores[0] = 99;  // Modify value
+Looping Through Arrays
+
+for (let i = 0; i < scores.length; i++) {
+  console.log(scores[i]);
+}
+
+scores.forEach(function(score) {
+  console.log(score);
+});
+Common Methods
+push() – Add to end
+
+pop() – Remove last item
+
+shift() – Remove first item
+
+unshift() – Add to beginning
+
+slice(start, end) – Copy a portion
+
+splice(index, count) – Remove items
+
+join(', ') – Convert array to string
+
+ JavaScript Functions
+Basic Declaration
+
+function square(number) {
+  return number * number;
+}
+Function Expression
+
+const square = function(number) {
+  return number * number;
+};
+Arrow Function
+
+const square = number => number * number;
+Named Expression (Recursive)
+
+const factorial = function fac(n) {
+  return n < 2 ? 1 : n * fac(n - 1);
+};
+
+Function Hoisting
+console.log(fullName('Antonia', 'Francesca'));
+
+function fullName(first, last) {
+  return `${first} ${last}`;
+}
+
+document.querySelector('#fullName').innerHTML = fullName('Antonia', 'Francesca');

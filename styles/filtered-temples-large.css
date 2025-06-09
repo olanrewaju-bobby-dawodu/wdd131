@@ -1,0 +1,61 @@
+@media (min-width: 44em) {
+	main {
+		margin: 0 auto;
+		max-width: 44em;
+	}
+
+	h1 {
+		text-align: left;
+		font-size: 2rem;
+		margin-left: 1rem;
+	}
+
+	#hamburger {
+		display: none;
+	}
+
+	.navigation {
+		flex-direction: row;
+	}
+
+	.navigation a {
+		display: block;
+		flex: 1 1 100%;
+	}
+
+	.images {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+@media (min-width: 63em) {
+	main {
+		margin: 0 auto;
+		max-width: 63em;
+	}
+
+	h1 {
+		text-align: left;
+		font-size: 2rem;
+		margin-left: 1rem;
+	}
+
+	#hamburger {
+		display: none;
+	}
+
+	.navigation {
+		flex-direction: row;
+	}
+
+	.navigation a {
+		display: block;
+		flex: 1 1 100%;
+	}
+
+	.images {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
