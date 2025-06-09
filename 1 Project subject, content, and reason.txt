@@ -23,4 +23,4 @@ A website that showcases the creative processes, styles, and personal inspiratio
 
 🎯
 The reason you chose this subject:
-I’m passionate about music and fascinated by how musicians express their creativity. I once came across a visually interactive music site that inspired me, and now I want to build a unique version of it that celebrates artistic individuality without compromising user experience.
+I alo create, and I’m passionate about music and fascinated by how musicians express their creativity. I once came across a visually interactive music site that inspired me, and now I want to build a unique version of it that celebrates artistic individuality without compromising user experience.
