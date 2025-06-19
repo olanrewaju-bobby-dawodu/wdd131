@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | The Soundwaves Collective</title>
+  <meta name="description" content="Contact form for inquiries and collaborations." />
+  <meta name="author" content="Olanrewaju Bobby Dawodu" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="scripts/main.js" defer></script>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head><body class="contact-page">
+  <header>
+    <img src="images/music_logo.avif" alt="Soundwaves Collective Logo" width="100" loading="lazy" />
+    <h1>The Soundwaves Collective</h1>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>  <main>
+    <h2>Contact Us</h2>
+    <form id="contactForm" novalidate>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Your full name" /><label for="email">Email:</label>
+  <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required placeholder="Your inquiry or message" rows="5"></textarea>
+
+  <button type="submit">Send Message</button>
+  <p id="formMessage" aria-live="polite"></p>
+</form>
+
+  </main>  <footer>
+    <p><span id="currentyear"></span> &copy; Olanrewaju Bobby Dawodu - Global Music Community</p>
+    <p id="lastModified"></p>
+    <div class="footer-links">
+      <a href="references.html">References</a>
+      <a href="#"><img src="images/yt-icon.png" alt="YouTube" width="24" /></a>
+      <a href="#"><img src="images/ig-icon.png" alt="Instagram" width="24" /></a>
+    </div>
+  </footer>
+</body></html>

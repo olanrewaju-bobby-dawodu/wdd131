@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artists | The Soundwaves Collective</title>
+  <meta name="author" content="Olanrewaju Bobby Dawodu" />
+  <meta name="description" content="Discover iconic artists across reggae, soul, pop, and more." />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="" />
+  <script src="scripts/main.js" defer></script>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="artists-page">
+  <div id="page">
+    <header>
+      <img src="images/music_logo.avif" alt="Soundwaves Collective Logo" width="100" loading="lazy">
+      <h1>The Soundwaves Collective</h1>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="artists.html" class="active">Artists</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main1">
+      <h2>Featured Artists</h2>
+      <p>Explore the most influential artists of all time. Filter by genre to discover reggae, soul, rock, and more.</p>
+
+      <label for="genreFilter">Filter by Genre:</label>
+      <select id="genreFilter">
+        <option value="all">All</option>
+        <option value="reggae">Reggae</option>
+        <option value="soul">Soul</option>
+        <option value="pop">Pop</option>
+        <option value="rock">Rock</option>
+      </select>
+
+      <div id="artistContainer" class="artist-grid">
+        <!-- Artist cards will be inserted here by JS -->
+      </div>
+    </main>
+
+    <footer>
+      <p><span id="currentyear"></span> &copy; Olanrewaju Bobby Dawodu - Global Music Community</p>
+      <p id="lastModified"></p>
+      <div class="footer-links">
+        <a href="references.html">References</a>
+        <a href="#"><img src="images/yt-icon.png" alt="YouTube" width="24"></a>
+        <a href="#"><img src="images/ig-icon.png" alt="Instagram" width="24"></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+:root {
+  --primary: #5a189a;     /* Deep Purple */
+  --accent: #c0c0c0;      /* Silver */
+  --dark: #000;
+  --light: #f0f0f0;
+  --bg: #121212;
+  --font-main: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--bg);
+  color: var(--light);
+  line-height: 1.6;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #8a2be2;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.main1{
+    justify-content: center;
+    text-align: center;
+}
+
+h1, h2 {
+  color: var(--accent);
+  text-align: center;
+}
+
+.artist-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 2rem;
+}
+
+.artist-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.artist-card:hover {
+  transform: scale(1.02);
+}
+
+.artist-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.artist-card h3 {
+  margin-top: 0.5rem;
+  color: var(--accent);
+}
+
+.artist-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+label, select {
+  display: block;
+  margin: 1rem auto;
+  max-width: 300px;
+  width: 100%;
+}
+
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: var(--dark);
+  color: var(--light);
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--light);
+  border-top: 2px solid #8a2be2;
+  position: absolute;
+}
+
+footer {
+    text-align: center;
+    
+    bottom: 0;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+footer a {
+  color: var(--accent);
+  margin: 0 0.5rem;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--accent);
+  color: #000;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}

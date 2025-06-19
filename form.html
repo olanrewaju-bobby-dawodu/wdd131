@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WD131 Form Assignment Week 5</title>
+    <meta name="author" content="Olanrewaju Bobby Dawodu">
+    <meta name="description" content="WD131 Form Assignment Week 5">
+    <script src="scripts/form.js" defer></script>
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html" class="webForm">
+
+            <div class="productNameTitle">
+                Product Name
+            </div>
+            <div class="selections">
+                <select id="productname" name="products" required>
+                    <option value="" disabled selected hidden>- Select a Product-</option>
+                </select>
+
+            </div>
+
+
+            <div id="overallRatingTitle">Overall Rating (5 being the highest)</div>
+
+            <div class="radio-button">
+                <input type="radio" id="one" name="rating" value="one" required>
+                <label for="one">1</label>
+
+                <input type="radio" id="two" name="rating" value="two">
+                <label for="two">2</label>
+
+                <input type="radio" id="three" name="rating" value="three">
+                <label for="three">3</label>
+
+                <input type="radio" id="four" name="rating" value="four">
+                <label for="four">4</label>
+
+                <input type="radio" id="five" name="rating" value="five">
+                <label for="five">5</label>
+            </div>
+
+
+            <div>
+                <label for="date">Date of Installation</label>
+
+                <input id="date" name="date" type="date" required>
+
+            </div>
+
+            <div class="features">
+                Which features did you find useful in this product?<br>
+                (Check all that apply)
+
+                <label for="durability"><input type="checkbox" id="durability" name="durability"
+                        value="durability">Durability</label>
+                <label for="easeofuse"><input type="checkbox" id="easeofuse" name="easeofuse" value="easeofuse">Ease of
+                    Use</label>
+                <label for="performance"><input type="checkbox" id="performance" name="performance"
+                        value="performance">Performance</label>
+                <label for="design"><input type="checkbox" id="design" name="design" value="design">Design</label>
+            </div>
+
+            <div>
+                <label for="textarea">Written Review <span class="optional">(Optional)</span></label>
+                <div><textarea id="textarea" name="textarea"></textarea></div>
+            </div>
+            <div>
+                <label for="name">Your name <span class="optional">(Optional)</span></label>
+                <div><input type="text" id="name" name="name"></div>
+            </div>
+
+            <input type="submit" value="Post Review">
+        </form>
+
+
+    </main>
+
+    <footer>
+        <p>
+            <span>&copy;</span>
+            <span id="currentyear"></span> - Olanrewaju Bobby Dawodu - Lagos State - Nigeria
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
